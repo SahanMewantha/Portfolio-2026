@@ -23,23 +23,23 @@ const contactCards = [
     icon: MessageCircle,
     label: "WhatsApp",
     value: "+94 76 123 4567",
-    href: "https://wa.me/94761234567",
+    href: "https://wa.link/ll6fye",
     color: "#25D366",
     bg: "from-[#25D366]/20 to-[#25D366]/5",
   },
   {
     icon: Phone,
     label: "Call Me",
-    value: "+94 76 123 4567",
-    href: "tel:+94761234567",
+    value: "+94 76 556 8860",
+    href: "tel:+94765568860",
     color: "#00d6ff",
     bg: "from-[#00d6ff]/20 to-[#00d6ff]/5",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "sahan@example.com",
-    href: "mailto:sahan@example.com",
+    value: "sahanmewantha00@.com",
+    href: "mailto:sahanmewantha00@.com",
     color: "#FF6B6B",
     bg: "from-[#FF6B6B]/20 to-[#FF6B6B]/5",
   },
@@ -95,7 +95,7 @@ export default function ContactSection() {
 
     emailjs
       .sendForm(
-        "service_sy7uveh",
+        "service_eoj137k",
         "template_zt6i1gb",
         formRef.current,
         "MB0zaOz-ahk-D-D5D"

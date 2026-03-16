@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import { Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DecryptedText from './DecryptedText';
@@ -233,10 +234,13 @@ export default function AboutMe() {
           <div className="relative z-10 group cursor-pointer">
             {/* Rounded Image Frame - Larger on 2xl */}
             <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] 2xl:w-[600px] 2xl:h-[600px] rounded-full overflow-hidden border-2 border-[rgba(0,214,255,0.3)] shadow-[0_0_40px_rgba(0,214,255,0.15),inset_0_0_60px_rgba(0,214,255,0.08)] bg-[#050505] transition-transform duration-500 ease-out group-hover:scale-105 group-hover:border-[rgba(0,214,255,0.6)] group-hover:shadow-[0_0_60px_rgba(0,214,255,0.3)]">
-              <img 
+              <Image 
                 src="/me.png" 
                 alt="Sahan Mewantha" 
-                className="w-full h-full object-cover object-top contrast-105 brightness-95 mix-blend-normal transition-transform duration-700 ease-out group-hover:scale-110"
+                fill
+                priority
+                sizes="(max-width: 768px) 280px, (max-width: 1536px) 380px, 600px"
+                className="object-cover object-top contrast-105 brightness-95 mix-blend-normal transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-50" style={{ background: 'linear-gradient(160deg, rgba(0, 214, 255, 0.12) 0%, transparent 40%, rgba(0, 214, 255, 0.06) 100%)' }} />
             </div>

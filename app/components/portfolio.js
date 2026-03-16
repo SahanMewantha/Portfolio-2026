@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { Github, ExternalLink, ArrowUpRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,13 +13,13 @@ const projects = [
   {
     id: 1,
     brandName: "Seeker Moments",
-    brandLogo: "seeker.png",
+    brandLogo: "/seeker.png",
     category: "Business / Web3",
     technologies: ["NextJS", "Framer Motion", "Tailwind CSS"],
     images: [
-      "/project/seek1.png",
-      "/project/seek2.png",
-      "/project/seek3.png"
+      "/project/seek1.webp",
+      "/project/seek2.webp",
+      "/project/seek3.webp"
     ],
     github: "https://github.com/yourusername/project1",
     live: "https://www.seekermoments.com/",
@@ -31,9 +32,9 @@ const projects = [
     category: "Analytics / Dashboard",
     technologies: ["NextJS", "Framer Motion", "Tailwind CSS"],
     images: [
-      "/project/cha1.png",
-      "/project/cha2.png",
-      "/project/cha3.png"
+      "/project/cha1.webp",
+      "/project/cha2.webp",
+      "/project/cha3.webp"
     ],
     github: "https://github.com/yourusername/project2",
     live: "https://www.chathurgihan.site/",
@@ -46,9 +47,9 @@ const projects = [
     category: "Business / Web3",
     technologies: ["NextJS", "Framer Motion", "Tailwind CSS"],
     images: [
-      "/project/ftr1.png",
-      "/project/ftr2.png",
-      "/project/ftr3.png"
+      "/project/ftr1.webp",
+      "/project/ftr2.webp",
+      "/project/ftr3.webp"
     ],
     github: "https://github.com/yourusername/project3",
     live: "https://ftr-sigma.vercel.app/",
@@ -61,9 +62,9 @@ const projects = [
     category: "Financial/ Mobile",
     technologies: ["Flutter", "Firebase", "NodeJS", "MongoDB"],
     images: [
-      "/project/sma1.png",
-      "/project/sma2.png",
-      "/project/sma3.png"
+      "/project/sma1.webp",
+      "/project/sma2.webp",
+      "/project/sma3.webp"
     ],
     size: "large"
   }
@@ -158,11 +159,13 @@ function ProjectCard({ project, setRef }) {
       {/* Image layer */}
       <div className="absolute inset-0 w-full h-full">
         {project.images.map((img, i) => (
-          <img
+          <Image
             key={i}
             src={img}
             alt={`${project.brandName} - ${i + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className={`object-cover transition-opacity duration-700 ease-in-out ${
               activeImage === i ? 'opacity-100' : 'opacity-0'
             }`}
           />
@@ -188,8 +191,8 @@ function ProjectCard({ project, setRef }) {
       {/* Top row — Brand logo + category (always visible, subtle) */}
       <div className="absolute top-0 left-0 right-0 p-6 md:p-8 flex items-start justify-between z-[2]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 shadow-lg bg-black/30 backdrop-blur-sm">
-            <img src={project.brandLogo} alt={project.brandName} className="w-full h-full object-cover" />
+          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 shadow-lg bg-black/30 backdrop-blur-sm">
+            <Image src={project.brandLogo} alt={project.brandName} fill sizes="40px" className="object-cover" />
           </div>
           <span className="text-white/80 text-sm font-semibold tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {project.brandName}

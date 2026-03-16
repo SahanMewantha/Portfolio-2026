@@ -3,12 +3,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Orb from "./Orb";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// ─── SVG Tech Icons ───
 const TechIcons = {
   NextJS: () => (
     <svg viewBox="0 0 128 128" fill="currentColor" width="100%" height="100%">
@@ -192,11 +192,8 @@ export default function HeroSection() {
     <>
       {/* Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@300;400;500&display=swap');
         * { box-sizing: border-box; }
         body { margin: 0; background: #050505; }
-        .font-syne { font-family: 'Syne', sans-serif; }
-        .font-mono { font-family: 'DM Mono', monospace; }
         .vertical-rl { writing-mode: vertical-rl; }
 
         /* noise overlay */
@@ -272,6 +269,15 @@ export default function HeroSection() {
       >
         {/* Scanline texture */}
         <div className="scanline" />
+        <div className="absolute inset-0">
+            <Orb
+              hue={0}
+              hoverIntensity={0.2}
+              rotateOnHover={true}
+              forceHoverState={false}
+              backgroundColor="#0d5e7d"
+            />
+          </div>
 
         {/* Parallax BG */}
         <div id="parallax-bg" className="absolute inset-0 pointer-events-none">
@@ -301,17 +307,17 @@ export default function HeroSection() {
               <div style={{ width: size, height: size, color: color, opacity: 0.9 }}>
                 <Icon />
               </div>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{label}</span>
+              <span className="font-firacode text-[9px] uppercase tracking-widest text-white/40">{label}</span>
             </div>
           ))}
         </div>
 
         {/* ─── NAV ─── */}
         <nav className="relative z-20 flex items-center justify-between px-8 md:px-16 pt-8">
-          <div id="nav-name" className="font-mono text-[13px] tracking-[0.15em]" style={{ opacity:0, color:"rgba(255,255,255,0.45)" }}>
-            <span style={{ color:"#00d6ff" }}>//</span> Sahan Mewantha
+          <div id="nav-name" className="font-firacode text-[13px] tracking-[0.15em]" style={{ opacity:0, color:"rgba(255,255,255,0.45)" }}>
+            <span style={{ color:"#03749b" }}>//</span> Sahan Mewantha
           </div>
-          <a href="/cv.pdf" download id="cv-btn" className="cv-btn font-mono text-[11px] uppercase tracking-widest px-5 py-2.5" style={{ opacity:0 }}>
+          <a href="/SahanMewantha.pdf" download id="cv-btn" className="cv-btn font-firacode text-[11px] uppercase tracking-widest px-5 py-2.5" style={{ opacity:0 }}>
             <span>↓ Download CV</span>
           </a>
         </nav>
@@ -320,7 +326,7 @@ export default function HeroSection() {
         <div ref={contentWrapperRef} className="relative z-20 flex flex-col justify-center flex-1 px-8 md:px-16 pb-16 mt-8 max-w-5xl">
 
           {/* Eyebrow */}
-          <p id="eyebrow" className="font-mono text-[11px] uppercase tracking-[0.28em] mb-6" style={{ opacity:0, color:"#00d6ff" }}>
+          <p id="eyebrow" className="font-firacode text-[11px] uppercase tracking-[0.28em] mb-6" style={{ opacity:0, color:"#0093c0" }}>
             // Software Engineer
           </p>
 
@@ -343,7 +349,7 @@ export default function HeroSection() {
           <div id="reveal-line" style={{ width:0, height:1, background:"#00d6ff", opacity:0, marginBottom:"2rem" }} />
 
           {/* Sub text */}
-          <p id="subtext" className="font-mono text-[13px] leading-[1.9] max-w-sm mb-10" style={{ opacity:0, color:"rgba(255,255,255,0.38)" }}>
+          <p id="subtext" className="font-firacode text-[13px] leading-[1.9] max-w-sm mb-10" style={{ opacity:0, color:"rgba(255,255,255,0.38)" }}>
             Web apps that scale.<br />
             Mobile apps that captivate.<br />
             Experiences that linger.
@@ -353,14 +359,14 @@ export default function HeroSection() {
           <div id="cta-group" className="flex items-center gap-8" style={{ opacity:0 }}>
             <button
               onClick={() => scrollTo("portfolio")}
-              className="cta-primary font-mono text-[11px] uppercase tracking-widest font-bold px-8 py-4"
-              style={{ background:"#00d6ff", color:"#050505" }}
+              className="cta-primary font-firacode text-[11px] uppercase tracking-widest font-bold px-8 py-4"
+              style={{ background:"#03749b", color:"#ffffffff" }}
             >
               View Work
             </button>
             <button
               onClick={() => scrollTo("contact")}
-              className="group font-mono text-[11px] uppercase tracking-widest flex items-center gap-3 transition-colors duration-300"
+              className="group font-firacode text-[11px] uppercase tracking-widest flex items-center gap-3 transition-colors duration-300"
               style={{ color:"rgba(255,255,255,0.4)" }}
               onMouseEnter={e => (e.currentTarget.style.color = "#00d6ff")}
               onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}
@@ -380,18 +386,18 @@ export default function HeroSection() {
               <div className="terminal-dot" style={{ background:"#ff5f57" }} />
               <div className="terminal-dot" style={{ background:"#febc2e" }} />
               <div className="terminal-dot" style={{ background:"#28c840" }} />
-              <span className="font-mono text-[10px] ml-3 tracking-widest" style={{ color:"rgba(0,214,255,0.35)" }}>~/sahan-mewantha/portfolio</span>
+              <span className="font-firacode text-[10px] ml-3 tracking-widest" style={{ color:"rgba(0,214,255,0.35)" }}>~/sahan-mewantha/portfolio</span>
             </div>
             {/* Terminal body */}
             <div className="px-4 py-3 space-y-1" style={{ minHeight: 150 }}>
               {terminalLines.map((line, i) => (
                 terminalVisible.includes(i) && (
-                  <div key={i} className="term-line font-mono text-[11px] leading-relaxed" style={{ color: line.color }}>
+                  <div key={i} className="term-line font-firacode text-[11px] leading-relaxed" style={{ color: line.color }}>
                     {line.text}
                   </div>
                 )
               ))}
-              <div className="font-mono text-[11px]" style={{ color:"rgba(0,214,255,0.6)" }}>
+              <div className="font-firacode text-[11px]" style={{ color:"rgba(0,214,255,0.6)" }}>
                 <span>$ </span>
                 <span className="cursor-blink" />
               </div>
@@ -401,7 +407,7 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <div id="scroll-indicator" className="absolute bottom-8 left-1/2 flex flex-col items-center gap-3 pointer-events-none z-10" style={{ opacity:0, transform:"translateX(-50%)" }}>
-          <span className="font-mono vertical-rl text-[9px] uppercase tracking-[0.22em]" style={{ color:"rgba(255,255,255,0.22)" }}>scroll</span>
+          <span className="font-firacode vertical-rl text-[9px] uppercase tracking-[0.22em]" style={{ color:"rgba(255,255,255,0.22)" }}>scroll</span>
           <div style={{ width:1, height:52, background:"linear-gradient(to bottom, rgba(0,214,255,0.6), transparent)" }} />
         </div>
       </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
@@ -195,10 +196,12 @@ export default function TestimonialsSection() {
                   boxShadow: `0 20px 60px ${t.color}25`,
                 }}
               >
-                <img
+                <Image
                   src={t.image}
                   alt={t.name}
-                  className="w-full h-full object-cover object-center"
+                  fill
+                  sizes="(max-width: 768px) 240px, (max-width: 1536px) 280px, 340px"
+                  className="object-cover object-center"
                 />
                 {/* Color tint overlay */}
                 <div

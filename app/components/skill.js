@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -145,14 +146,13 @@ export default function SkillsSection() {
                     key={tIdx}
                     className="group flex items-center gap-3 px-5 py-3.5 bg-[#0a0a0a]/80 backdrop-blur-sm border border-white/[0.06] rounded-2xl hover:bg-white/5 hover:border-[#00d6ff]/30 transition-all duration-300 cursor-default flex-shrink-0"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/[0.06] flex items-center justify-center p-1.5 group-hover:bg-white/10 transition-colors duration-300 overflow-hidden flex-shrink-0">
-                      <img
+                    <div className="relative w-9 h-9 rounded-xl bg-white/[0.06] flex items-center justify-center p-1.5 group-hover:bg-white/10 transition-colors duration-300 overflow-hidden flex-shrink-0">
+                      <Image
                         src={tool.logo}
                         alt={tool.name}
-                        className="w-full h-full object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
+                        fill
+                        sizes="36px"
+                        className="object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300 p-1.5"
                       />
                     </div>
                     <span className="text-sm md:text-base font-semibold text-white/40 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
