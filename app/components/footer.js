@@ -31,10 +31,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { Icon: Facebook, href: "https://facebook.com/sahanmewantha", label: "Facebook" },
+  { Icon: Facebook, href: "https://web.facebook.com/SahanM2000", label: "Facebook" },
   { Icon: Instagram, href: "https://instagram.com/sahanmewantha", label: "Instagram" },
-  { Icon: Linkedin, href: "https://linkedin.com/in/sahanmewantha", label: "LinkedIn" },
-  { Icon: Github, href: "https://github.com/sahanmewantha", label: "GitHub" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/in/sahan-mewantha-012ab4248/", label: "LinkedIn" },
+  { Icon: Github, href: "https://github.com/SahanMewantha", label: "GitHub" },
   { Icon: RedditIcon, href: "https://reddit.com/u/sahanmewantha", label: "Reddit", isCustom: true },
 ];
 
@@ -184,7 +184,7 @@ export default function Footer() {
             <p className="text-xs md:text-sm text-white/20 tracking-wide">
               Designed & Developed by{" "}
               <a
-                href="https://github.com/sahanmewantha"
+                href="https://github.com/SahanMewantha"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#00d6ff]/50 hover:text-[#00d6ff] transition-colors duration-300"

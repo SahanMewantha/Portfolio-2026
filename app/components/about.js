@@ -175,7 +175,7 @@ export default function AboutMe() {
           </div>
           <div ref={iconsRef} className="flex items-center justify-center md:justify-start gap-4">
             <a 
-              href="https://github.com/sahanmewantha" 
+              href="https://github.com/SahanMewantha" 
               target="_blank" 
               rel="noreferrer" 
               className="flex items-center justify-center w-12 h-12 2xl:w-14 2xl:h-14 rounded-xl border border-[rgba(0,214,255,0.25)] text-white/60 hover:text-[#00d6ff] hover:border-[#00d6ff] hover:-translate-y-1 transition-all duration-300 bg-[rgba(0,214,255,0.03)] relative overflow-hidden group"
@@ -185,7 +185,7 @@ export default function AboutMe() {
               <Github size={22} className="relative z-10" />
             </a>
             <a 
-              href="https://linkedin.com/in/sahanmewantha" 
+              href="https://www.linkedin.com/in/sahan-mewantha-012ab4248/" 
               target="_blank" 
               rel="noreferrer" 
               className="flex items-center justify-center w-12 h-12 2xl:w-14 2xl:h-14 rounded-xl border border-[rgba(0,214,255,0.25)] text-white/60 hover:text-[#00d6ff] hover:border-[#00d6ff] hover:-translate-y-1 transition-all duration-300 bg-[rgba(0,214,255,0.03)] relative overflow-hidden group"
