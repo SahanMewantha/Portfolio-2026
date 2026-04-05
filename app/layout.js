@@ -16,6 +16,7 @@ export const metadata = {
   description: "Portfolio of Sahan Mewantha, a software engineer specializing in web developing and mobile app development.",
   keywords: ["Sahan mewantha", "web developing", "software engineer", "mobile app development"],
 };
+import SmoothScrolling from "./components/SmoothScrolling";
 
 export default function RootLayout({ children }) {
   return (
@@ -23,7 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased bg-background text-text font-inter`}
       >
-        {children}
+        <SmoothScrolling>
+          {children}
+        </SmoothScrolling>
       </body>
     </html>
   );
