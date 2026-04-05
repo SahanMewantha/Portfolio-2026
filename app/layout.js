@@ -12,8 +12,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Sahan Mewantha",
-  description: "Software Engineer",
+  title: "Sahan Mewantha | Software Engineer & Web Developer",
+  description: "Portfolio of Sahan Mewantha, a software engineer specializing in web developing and mobile app development.",
+  keywords: ["Sahan mewantha", "web developing", "software engineer", "mobile app development"],
 };
 
 export default function RootLayout({ children }) {
