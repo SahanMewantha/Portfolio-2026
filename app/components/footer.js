@@ -32,7 +32,7 @@ const navLinks = [
 
 const socialLinks = [
   { Icon: Facebook, href: "https://web.facebook.com/SahanM2000", label: "Facebook" },
-  { Icon: Instagram, href: "https://instagram.com/sahanmewantha", label: "Instagram" },
+  { Icon: Instagram, href: "https://www.instagram.com/sahan__mewantha?igsh=MTlkczA0eDhua2VqMw==", label: "Instagram" },
   { Icon: Linkedin, href: "https://www.linkedin.com/in/sahan-mewantha-012ab4248/", label: "LinkedIn" },
   { Icon: Github, href: "https://github.com/SahanMewantha", label: "GitHub" },
   { Icon: RedditIcon, href: "https://reddit.com/u/sahanmewantha", label: "Reddit", isCustom: true },
