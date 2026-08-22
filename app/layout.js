@@ -1,4 +1,6 @@
 import { Fira_Code, Inter } from "next/font/google";
+import Script from "next/script";
+import SmoothScrolling from "./components/SmoothScrolling";
 import "./globals.css";
 
 const firaCode = Fira_Code({
@@ -16,11 +18,25 @@ export const metadata = {
   description: "Portfolio of Sahan Mewantha, a software engineer specializing in web developing and mobile app development.",
   keywords: ["Sahan mewantha", "web developing", "software engineer", "mobile app development"],
 };
-import SmoothScrolling from "./components/SmoothScrolling";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${firaCode.variable} ${inter.variable}`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MSE1Z3WZX9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-MSE1Z3WZX9');
+          `}
+        </Script>
+      </head>
       <body
         className={`antialiased bg-background text-text font-inter`}
       >
