@@ -52,7 +52,7 @@ const projects = [
       "/project/ftr3.webp"
     ],
     github: "https://github.com/yourusername/project3",
-    live: "https://ftr-sigma.vercel.app/",
+    live: "https://ftrglobals.com/",
     size: "large"
   },
   {
