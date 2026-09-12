@@ -22,7 +22,7 @@ const projects = [
       "/project/seek3.webp"
     ],
     github: "https://github.com/yourusername/project1",
-    live: "https://www.seekermoments.com/",
+    live: "https://seekerfinal.vercel.app/",
     size: "large"
   },
   {
