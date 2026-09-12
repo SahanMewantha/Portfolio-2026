@@ -317,7 +317,7 @@ export default function HeroSection() {
           <div id="nav-name" className="font-firacode text-[13px] tracking-[0.15em]" style={{ opacity:0, color:"rgba(255,255,255,0.45)" }}>
             <span style={{ color:"#03749b" }}>//</span> Sahan Mewantha
           </div>
-          <a href="/SahanMewantha.pdf" download id="cv-btn" className="cv-btn font-firacode text-[11px] uppercase tracking-widest px-5 py-2.5" style={{ opacity:0 }}>
+          <a href="/sahanmewantha.pdf" download id="cv-btn" className="cv-btn font-firacode text-[11px] uppercase tracking-widest px-5 py-2.5" style={{ opacity:0 }}>
             <span>↓ Download CV</span>
           </a>
         </nav>

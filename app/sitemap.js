@@ -9,7 +9,7 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/SahanMewantha.pdf`,
+      url: `${baseUrl}/sahanmewantha.pdf`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
